@@ -1,4 +1,4 @@
-// src/pages/AdmissionsPage.jsx
+// src/pages/AdmissionPage.jsx
 
 import { Link } from "react-router-dom";
 
