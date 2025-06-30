@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 const CoursesPage = () => {
   return(
+    <div className="page-containt">
       <div className="page-container" style={{overflow: "auto"}}>
         <h1>Our Academic Programs</h1>
           <p>
@@ -100,8 +101,9 @@ const CoursesPage = () => {
           </p>
           <div className="call-to-action">
             <p>Have questions about a specific course?</p> 
-            <Link to="/cantact" className="btn">Inqurie About Courses</Link>
+            <Link to="/contact" className="btn">Inqurie About Courses</Link>
           </div>
+        </div>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 //src/pages/AboutPage.jsx
 const AboutPage = () => {
   return(
+    <div className="page-containt">
     <div className="page-container" style={{overflow:"auto"}}>
     <h1 className="animate-fade-in-up">About Vivekanand College</h1>    
       <p>
@@ -24,6 +25,7 @@ const AboutPage = () => {
       <p>
         [Briefly describe the college's history - e.g., how it started, key milestones, growth over the years, famous alumni if any]. Our journey began with a vision to make quality education available to all, and we continue that legacy today.
       </p>
+    </div>
     </div>
         
     );

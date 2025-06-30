@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"; // Import Link for internal navigation
 // Add more image imports if needed
 const HomePage = () => {
     return(
+        <div className="page-containt">
         <div className="page-container" style={{overflow: "auto" }}>
          {/* hero/Banner Section with Image */}   
             <div className="hero-section">   
@@ -56,10 +57,10 @@ const HomePage = () => {
             <div className="image-gallery">
                 <img 
                     src="\Images\students-studying.jpeg"
-                    alt="Students studying in library" 
+                    alt="Students studying in library" hight="132.8" width="500px"
                 />
                 <img src="\Images\campus-life.jpg"
-                     alt="Students on compus ground"  />
+                     alt="Students on compus ground" height="200px" width="500px"/>
             </div>
             <p>
                 Explore our vibrant campus and state-of-the-art facilities designed to 
@@ -71,7 +72,8 @@ const HomePage = () => {
                  Explore Courses
                 </Link>{" "}
             </div>
-        </div>    
+        </div> 
+        </div>   
     );
 };
 export default HomePage;

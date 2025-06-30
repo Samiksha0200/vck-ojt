@@ -1,4 +1,7 @@
 /* src/pages/pages.css */
+.page-containt{
+    background-color: aqua;
+}
 .page-container{
     max-width: 960px;
     /* Max width for content to prevent it from stretching too wide */
@@ -6,7 +9,7 @@
     margin: 20px auto;
     /* Center the content wth some top/bottom margin */
     padding: 20px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     /* White background for page content */
     border-radius: 8px;
     /* Slighttly rounded corners */

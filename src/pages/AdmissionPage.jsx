@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const AdmissionPage = () => {
     return(
+        <div className="page-containt">
         <div className="page-container" style={{ overflow: "auto"}}>
             <h1>Admissions at Vivekanand College </h1>
             <p>
@@ -88,6 +89,7 @@ const AdmissionPage = () => {
                 </a> */}
             {/* Replace "https://yourcollegeadmissionportal.com" with a real application portal link */}
             {/* </div> */}
+        </div>
         </div>
         
     );

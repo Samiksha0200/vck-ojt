@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 const NotFoundPage = () => {
     return(
+        <div className="page-containt">
         <div
            className="page-container"
            style={{
@@ -26,6 +27,7 @@ const NotFoundPage = () => {
                 alt="Page Not Found"
                style={{ marginTop: "20px", maxWidth: "100%", height: "auto" }}
             />
+        </div>
         </div>
     );
 };
