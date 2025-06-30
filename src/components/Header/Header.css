@@ -1,0 +1,148 @@
+/* Global Header Wrapper */
+.main-header {
+    background-color:#007bff; /* Primary blue background*/
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /*space out colloge name and nav */
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 999; /* Ensure header is above other content */
+}   
+.college-name {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.college-name a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+.college-name a:hover {
+    color: #E0E0E0;
+}
+/* Desktop navigation styles (default)*/
+.desktop-nav { 
+    display: flex; /* show by default*/
+    gap: 25px; /*space between links*/
+    align-items: center;
+}
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.nav-item:hover {
+    color: #E0E0E0;
+    border-bottom: 2px solid #E0E0E0;
+}
+/*Primary button (e.g.Apply Now)*/
+.btn.primary-btn {
+    background-color: #28a745; /*Green*/
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+.btn.primary-btn:hover {
+    background-color: #218838; /*Darker green*/
+}
+/* Hamburger Menu button (hidden by default on desktop*/
+.hamburger-menu {
+    display: none; /* Hide on desktop*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1002; /*Ensure it's above the drawer if needed*/
+}
+.hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+/*drawer navigation (hidden by default)*/
+.drawer-nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /*start off-screen to the right*/
+    height: 100%;
+    background-color: #F8F9FA; /*light background for drawer */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out; /*slide-in animation */
+    z-index: 1001; /*above page content, below overlay*/
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* space for closed buttob/header*/
+}
+.drawer-nav.open {
+    right: 0; /*slide in when open*/
+}
+.drawer-nav .nav-item {
+    color: #343A40; /*darker text for drawer links*/
+    padding: 15px 20px;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%; /* full width links*/
+    box-sizing: border-box; /*include padding in width*/
+}
+.drawer-nav .nav-item:hover {
+    background-color: #E9ECEF;
+    color: #007bff;
+    border-bottom: 1px solid #E0E0E0; /* reset border for hover if*/
+}
+.drawer-nav .nav-item.btn.primary-btn {
+    /* margin: 50px; space for button in drawer*/
+
+    text-align: center;
+}
+/*close button inside drawer*/
+.close-drawer-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #343A40;
+    cursor: pointer;
+    z-index: 1010;
+}
+/*overlay when drawer is open*/
+.drawer-overlay {
+    display: none; /*hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black*/
+    z-index: 1000; /* below drawer, above page content*/
+}
+.drawer-nav.open + .drawer-overlay {
+    display: block; /* show when drawer is open */
+}
+/* --- Media Queries for mobile ---*/
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* height desktop nav on mobile*/
+    }
+    .hamburger-menu {
+        display: block; /*Show hamburger on mobile */
+    }
+    .main-header {
+        justify-content:  space-between; /* ensure name and hamburger */
+    }
+    .college-name {
+        font-size: 1.5em; /*adjust college name size on mobile*/
+    }
+}
